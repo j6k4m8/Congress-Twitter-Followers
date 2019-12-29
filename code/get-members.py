@@ -41,6 +41,8 @@ if __name__ == "__main__":
         *{
             ("senate", "r"): ("SenateDems", "senaterepublicans"),
             ("senate", "d"): ("SenateDems", "senatedemocrats"),
+            ("house", "d"): ("thedemocrats", "house-democrats"),
+            ("house", "r"): ("housegop", "house-republicans")
         }[(house, party)]
     )
 
