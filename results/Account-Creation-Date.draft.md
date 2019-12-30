@@ -14,3 +14,7 @@
 ## n=11164
 
 ![](figures/follower-account-creation-date-n11164.png)
+
+## n=80627
+
+![](figures/results-n80627.png)
