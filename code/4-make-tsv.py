@@ -23,5 +23,12 @@ user_info.profile_image_url.loc[
     & (user_info.profile_image_url.str.startswith("https://pbs.twimg.com/profile_images/"))
 ].profile_image_url.map(lambda x: x[37:])
 
+user_info.background_image.loc[
+    (~pd.isna(user_info.background_image)) 
+    & (user_info.background_image.str.startswith("https://pbs.twimg.com/profile_banners/"))
+] = user_info[
+    (~pd.isna(user_info.background_image)) 
+    & (user_info.background_image.str.startswith("https://pbs.twimg.com/profile_banners/"))
+].background_image.map(lambda x: x[38:])
 
 user_info.to_csv("../data/users.tsv", "\t", quoting=2)
