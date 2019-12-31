@@ -25,4 +25,4 @@ def get_all_users():
 
 all_users = get_all_users()
 
-Parallel(n_jobs=20)(delayed(save_user_info)(u) for u in tqdm.tqdm(all_users))
+Parallel(n_jobs=30)(delayed(save_user_info)(u) for u in tqdm.tqdm(all_users))
